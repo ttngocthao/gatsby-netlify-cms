@@ -6,6 +6,21 @@ media_folder: /public/images
 public_folder: /images
 
 collections:
+  - name: products
+    label: Products
+    folder: src/pages/products
+    create: true
+    fields: 
+      - {
+          name: "templateKey",
+          widget: hidden,
+          label: "Template Key",
+          default: "products",
+        }
+      - { label: Product Id, name: productId, widget: string}
+      - { label: Product Name, name: productName, widget: string }
+      - { label: Product Intro, name: productIntro, widget: string }
+      - { label: Product Image,  name: productImage, widget: image, required: false  }
   - name: pages
     label: Pages
     files:
@@ -15,6 +30,26 @@ collections:
         media_folder: ""
         public_folder: ""
         fields:
+          - {
+              name: "templateKey",
+              widget: hidden,
+              label: "Template Key",
+              default: "index-page",
+            }
+          - {
+              label: Page Title,
+              name: pageTitle,
+              widget: string
+            }
+          - {
+              label: Page Introduction,
+              name: pageIntroduction,
+              widget: list,
+              fields:
+                [
+                  {label: Paragraph, name: paragraph, widget: string}
+                ]
+            }
           - {
               label: Products,
               name: products,

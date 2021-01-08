@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  repo: ttngocthao/gatsby-netlify-cms.git
+  branch: master
+media_folder: /public/images
+public_folder: /images
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - file: src/pages/index.md
+        label: Home Page
+        name: homePage
+        media_folder: ""
+        public_folder: ""
+        fields:
+          - {
+              label: Products,
+              name: products,
+              widget: list,
+              fields:
+                [
+                  { label: Product Name, name: productName, widget: string },
+                  { label: Product Intro, name: productIntro, widget: string },
+                  {
+                    label: Product Image,
+                    name: productImage,
+                    widget: string,
+                    required: false,
+                  },
+                ],
+            }

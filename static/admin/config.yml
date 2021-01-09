@@ -10,12 +10,13 @@ collections:
     label: Products
     folder: src/pages/products
     create: true
+    slug: "{{productName}}--{{productId}}__{{day}}-{{month}}-{{year}}"
     fields: 
       - {
-          name: "templateKey",
+          name: templateKey,
           widget: hidden,
-          label: "Template Key",
-          default: "products",
+          label: Template Key,
+          default: products,
         }
       - { label: Product Id, name: productId, widget: string}
       - { label: Product Name, name: productName, widget: string }

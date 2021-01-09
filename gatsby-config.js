@@ -4,7 +4,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/pages/homePage`,
+        path: `${__dirname}/src/data/pages/home`,
         name: "homePageData",
       },
     },

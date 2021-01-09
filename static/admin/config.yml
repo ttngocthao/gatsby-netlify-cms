@@ -8,7 +8,7 @@ public_folder: /images
 collections:
   - name: products
     label: Products
-    folder: data/products
+    folder: src/data/products
     create: true
     slug: "{{productName}}--{{productId}}__{{day}}-{{month}}-{{year}}"
     fields: 
@@ -22,14 +22,15 @@ collections:
       - { label: Product Name, name: productName, widget: string }
       - { label: Product Intro, name: productIntro, widget: string }
       - { label: Product Image,  name: productImage, widget: image, required: false  }
+      - { label: Product Page Content, name: productPageContent, widget: markdown, required: false}
   - name: pages
     label: Pages
     files:
-      - file: data/pages/homePage/index.md
+      - file: src/data/pages/home/index.md
         label: Home Page
         name: homePage
-        # media_folder: ""
-        # public_folder: ""
+        media_folder: ""
+        public_folder: ""
         fields:
           - {
               name: "templateKey",

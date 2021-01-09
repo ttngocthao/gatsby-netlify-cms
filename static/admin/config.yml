@@ -51,19 +51,4 @@ collections:
                   {label: Paragraph, name: paragraph, widget: string}
                 ]
             }
-          - {
-              label: Products,
-              name: products,
-              widget: list,
-              fields:
-                [
-                  { label: Product Name, name: productName, widget: string },
-                  { label: Product Intro, name: productIntro, widget: string },
-                  {
-                    label: Product Image,
-                    name: productImage,
-                    widget: image,
-                    required: false,
-                  },
-                ],
-            }
+

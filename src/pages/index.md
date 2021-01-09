@@ -8,5 +8,4 @@ pageIntroduction:
   - paragraph: " Eu ad sit enim labore quis ea labore in           labore quis
       cupidatat. Reprehenderit in pariatur dolore irure elit
       est           tempor excepteur cillum labore pariatur qui quis tempor."
-products: []
 ---

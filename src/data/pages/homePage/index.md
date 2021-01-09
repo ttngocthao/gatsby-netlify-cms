@@ -1,5 +1,6 @@
 ---
 pageTitle: Chocolate's World
+templateKey: index-page
 pageIntroduction:
   - paragraph: Aute tempor sint minim sit dolore aliquip ipsum tempor est
       nulla           excepteur et eu. Aliquip reprehenderit proident id elit

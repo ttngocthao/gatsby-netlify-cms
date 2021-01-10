@@ -1,4 +1,5 @@
 ---
+slug: matcha-chocolate--mc01__09-01-2021
 templateKey: products
 productId: MC01
 productName: Matcha Chocolate

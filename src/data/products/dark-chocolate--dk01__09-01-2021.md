@@ -1,4 +1,5 @@
 ---
+slug: dark-chocolate--dk01__09-01-2021
 templateKey: products
 productId: DK01
 productName: Dark Chocolate

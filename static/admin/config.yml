@@ -12,6 +12,7 @@ collections:
     create: true
     slug: "{{productName}}--{{productId}}__{{day}}-{{month}}-{{year}}"
     fields: 
+      - {name: slug, widget: hidden,label: slug, default: "{{productName}}--{{productId}}__{{day}}-{{month}}-{{year}}"}
       - {
           name: templateKey,
           widget: hidden,

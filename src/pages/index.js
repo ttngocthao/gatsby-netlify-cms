@@ -36,7 +36,7 @@ const Index = ({ data }) => {
                     alt=""
                   />
                 </figure>
-                <Link to="/">
+                <Link to={`/products/${item.frontmatter.slug}`}>
                   Read more about {item.frontmatter.productName}
                 </Link>
               </li>
@@ -56,6 +56,7 @@ export const query = graphql`
           pageIntroduction {
             paragraph
           }
+          slug
           templateKey
           productName
           productImage

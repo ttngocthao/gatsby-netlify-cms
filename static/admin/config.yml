@@ -11,19 +11,34 @@ collections:
     folder: src/data/products
     create: true
     slug: "{{productName}}--{{productId}}__{{day}}-{{month}}-{{year}}"
-    fields: 
-      - {name: slug, widget: hidden,label: slug, default: "{{productName}}--{{productId}}__{{day}}-{{month}}-{{year}}"}
+    fields:
+      - {
+          name: slug,
+          widget: hidden,
+          label: slug,
+          default: "{{productName}}-{{productId}}-{{day}}-{{month}}-{{year}}",
+        }
       - {
           name: templateKey,
           widget: hidden,
           label: Template Key,
           default: products,
         }
-      - { label: Product Id, name: productId, widget: string}
+      - { label: Product Id, name: productId, widget: string }
       - { label: Product Name, name: productName, widget: string }
       - { label: Product Intro, name: productIntro, widget: string }
-      - { label: Product Image,  name: productImage, widget: image, required: false  }
-      - { label: Product Page Content, name: productPageContent, widget: markdown, required: false}
+      - {
+          label: Product Image,
+          name: productImage,
+          widget: image,
+          required: false,
+        }
+      - {
+          label: Product Page Content,
+          name: body,
+          widget: markdown,
+          required: false,
+        }
   - name: pages
     label: Pages
     files:
@@ -39,18 +54,10 @@ collections:
               label: "Template Key",
               default: "index-page",
             }
-          - {
-              label: Page Title,
-              name: pageTitle,
-              widget: string
-            }
+          - { label: Page Title, name: pageTitle, widget: string }
           - {
               label: Page Introduction,
               name: pageIntroduction,
               widget: list,
-              fields:
-                [
-                  {label: Paragraph, name: paragraph, widget: string}
-                ]
+              fields: [{ label: Paragraph, name: paragraph, widget: string }],
             }
-

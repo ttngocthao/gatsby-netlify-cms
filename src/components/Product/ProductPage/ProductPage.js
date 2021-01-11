@@ -19,7 +19,7 @@ const ProductPage = (props) => {
             <h3>
                 Page content below
             </h3>
-            {renderAst(htmlAst)}
+            {/* {renderAst(htmlAst)} */}
         </div>
     )
 }

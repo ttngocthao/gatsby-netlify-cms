@@ -3,7 +3,7 @@ if (typeof window !== 'undefined') {
   const link = document.createElement('link')
   link.type = 'text/css'
   link.rel = 'stylesheet'
-  link.href = '/admin/admin.css'
+  link.href = '/src/styles/global.css'
   document.head.appendChild(link)
 
   if (process.env.NETLIFY_SITE_URL) {

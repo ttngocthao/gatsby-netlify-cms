@@ -22,7 +22,7 @@ const ProductPage = (props) => {
                 Page content below
             </h3>
           <Content style={styles} source={body} className='product-page__content'/> 
-          {/* <div style={styles} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/> */}
+          <div style={styles} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/>
             {/* {renderAst(htmlAst)} */}
            
 
@@ -30,4 +30,9 @@ const ProductPage = (props) => {
         </div>
     )
 }
+
+export const ProductPagePreview =()=>{
+  
+}
+
 export default ProductPage

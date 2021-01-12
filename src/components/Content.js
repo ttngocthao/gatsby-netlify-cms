@@ -5,6 +5,7 @@ import Marked from 'react-markdown'
 const encodeMarkdownURIs = (source = '') => {
   const markdownLinkRegex = /\[(.+)\]\((.+)(".+)\)/g
   console.log(source)
+  console.log(source.split('><'))
   return source.replace(markdownLinkRegex, (match, linkURI) => {
     if (!linkURI) return match
     const replaced = match.replace(linkURI, encodeURI(linkURI))
@@ -52,13 +53,14 @@ const encodeMarkdownURIs = (source = '') => {
 //   )
 // }
 
-const HtmlBlock = ({ value }) => {
-  if (value.indexOf('<iframe') !== 0) return value
+const HtmlBlock = (args) => {
+  console.log('args',args)
+  if (args.value.indexOf('<iframe') !== 0) return args.value
   return (
     <div
       className={`Content--Iframe`}
       dangerouslySetInnerHTML={{
-        __html: value
+        __html: args.value
       }}
     />
   )

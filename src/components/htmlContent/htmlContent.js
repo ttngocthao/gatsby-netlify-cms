@@ -1,13 +1,14 @@
 import React from 'react'
 
-export const Paragraph =(props)=>{
+export const Paragraph =({children})=>{
+    
     return(
-        <p className='product-page__p' style={{color:'purple'}}>{props.children}</p>
+        <p className='product-page__p' style={{color:'purple'}}>{children}</p>
     )
 }
 
-export const UnorderedList = (props)=>{
+export const UnorderedList = ({children})=>{
     return(
-        <ul className='product-page__ul' style={{border:'2px solid red'}}>{props.children}</ul>
+        <ul className='product-page__ul' style={{border:'2px solid red'}}>{children}</ul>
     )
 }

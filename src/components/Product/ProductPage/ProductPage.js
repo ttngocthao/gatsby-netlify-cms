@@ -10,7 +10,7 @@ const renderAst = new RehypeReact({
   }
 }).Compiler
 const ProductPage = (props) => {
-    const {productName,productId,productImage,htmlAst} = props 
+    const {productName,productId,productImage,htmlAst,html} = props 
     return (
         <div>
             <h1 style={{color:'green'}}>{productName} detail page</h1>
@@ -20,6 +20,9 @@ const ProductPage = (props) => {
                 Page content below
             </h3>
             {/* {renderAst(htmlAst)} */}
+            <div style={{border:'1px solid teal'}} className='product-page__content' dangerouslySetInnerHTML={{__html: html}}/>
+
+  
         </div>
     )
 }

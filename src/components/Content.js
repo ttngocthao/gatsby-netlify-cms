@@ -66,7 +66,7 @@ const HtmlBlock = (args) => {
   )
 }
 
-const Content = ({source,src,className=''})=>{
+const Content = ({source,src,className='',styles})=>{
     source = source || src || ''
     // if (source.match(/^</)) {
     //     source = withContentImages(source)
@@ -81,6 +81,7 @@ const Content = ({source,src,className=''})=>{
   
     return (
         <Marked
+        styles={styles}
         className={`Content ${className}`}
         source={encodeMarkdownURIs(source)}
         renderers={{

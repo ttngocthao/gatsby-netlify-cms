@@ -1,8 +1,8 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import RehypeReact from 'rehype-react'
 import Content from '../../Content'
 import {Paragraph,UnorderedList} from '../../htmlContent/htmlContent'
-
+const styles = {border:'1px solid teal'}
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components:{
@@ -11,7 +11,7 @@ const renderAst = new RehypeReact({
   }
 }).Compiler
 const ProductPage = (props) => {
-    const {productName,productId,productImage,htmlAst,body} = props 
+    const {productName,productId,productImage,htmlAst,body,viewInCMSAdmin} = props 
 
     return (
         <div>
@@ -21,9 +21,9 @@ const ProductPage = (props) => {
             <h3>
                 Page content below
             </h3>
-            <Content source={body} className='product-page__content'/>
+            {viewInCMSAdmin ? <Content style={styles} source={body} className='product-page__content'/> : <div style={styles} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/>}
             {/* {renderAst(htmlAst)} */}
-            <div style={{border:'1px solid teal'}} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/>
+           
 
   
         </div>

@@ -23,6 +23,21 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve:`gatsby-transformer-remark`,
+      options:{
+        plugins:[
+          {
+            resolve:`gatsby-remark-classes`,
+            options:{
+              classMap:{
+                "paragraph":'paragraph-styles'
+              }
+            }
+          }
+        ]
+      }
+    
+    },
   ],
 };

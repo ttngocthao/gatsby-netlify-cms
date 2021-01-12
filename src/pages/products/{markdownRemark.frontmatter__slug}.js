@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import { graphql } from "gatsby";
 import ProductPage from '../../components/Product/ProductPage/ProductPage'
 
@@ -14,7 +14,14 @@ const ProductDetailPage = ({ data }) => {
       htmlAst
     },
   } = data;
+  const [viewInCMSAdmin,setViewInCMSAdmin]= useState(false)
   console.log(data)
+  useEffect(()=>{
+    const previewPanelEle =document && document.getElementById('preview-pane')
+    if(previewPanelEle){
+      setViewInCMSAdmin(true)
+    }
+  },[])
   return (
     <div>
       <ProductPage 
@@ -23,6 +30,7 @@ const ProductDetailPage = ({ data }) => {
         productId={productId}
         htmlAst={htmlAst}
         body={html}
+        viewInCMSAdmin={viewInCMSAdmin}
       />
       
       {/* <h1>{productName} detail page</h1>

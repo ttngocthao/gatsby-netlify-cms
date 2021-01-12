@@ -22,7 +22,7 @@ const ProductDetailPage = ({ data }) => {
         productImage={productImage}
         productId={productId}
         htmlAst={htmlAst}
-        body={htmlAst}
+        body={html}
       />
       
       {/* <h1>{productName} detail page</h1>

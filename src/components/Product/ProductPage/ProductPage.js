@@ -1,5 +1,6 @@
 import React from 'react'
 import RehypeReact from 'rehype-react'
+import Content from '../../Content'
 import {Paragraph,UnorderedList} from '../../htmlContent/htmlContent'
 
 const renderAst = new RehypeReact({
@@ -19,6 +20,7 @@ const ProductPage = (props) => {
             <h3>
                 Page content below
             </h3>
+            <Content source={body} className='product-page__content'/>
             {/* {renderAst(htmlAst)} */}
             <div style={{border:'1px solid teal'}} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/>
 

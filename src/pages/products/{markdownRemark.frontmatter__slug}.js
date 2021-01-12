@@ -24,6 +24,7 @@ const ProductDetailPage = ({ data }) => {
         htmlAst={htmlAst}
         body={html}
       />
+      
       {/* <h1>{productName} detail page</h1>
       <h2>Code:{productId}</h2>
       <img src={productImage} alt=''/>

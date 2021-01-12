@@ -23,7 +23,7 @@ const ProductPage = (props) => {
             </h3>
             <Content source={body} className='product-page__content'/>
             {/* {renderAst(htmlAst)} */}
-            {/* <div style={{border:'1px solid teal'}} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/> */}
+            <div style={{border:'1px solid teal'}} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/>
 
   
         </div>

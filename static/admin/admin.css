@@ -81,3 +81,9 @@
   text-indent: 0;
 }
 
+p{
+    color:pink;
+}
+.paragraph-styles{
+    color: darkcyan;
+}

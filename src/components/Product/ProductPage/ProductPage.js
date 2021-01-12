@@ -14,7 +14,7 @@ const ProductPageTemplate =({productName,productImage,productId,content,contentC
     <figure style={{maxWidth: '300px'}}>
       <img alt='' src={productImage}/>
     </figure>
-    <PageContent content={content} className='testing'/>
+    <PageContent content={content} className='product-page__content'/>
     </>
   )
 }

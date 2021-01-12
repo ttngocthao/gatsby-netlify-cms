@@ -3,6 +3,6 @@ import CMS from 'netlify-cms-app'
 import './cms-utils'
 
 
-import ProductPagePreview from '../components/Product/ProductPage/ProductPage'
+import ProductPagePreview from './previewTemplate/ProductPagePreview'
 
-CMS.registerPreviewTemplate('products',({entry})=><ProductPagePreview {...entry.toJS().data} />)
+CMS.registerPreviewTemplate('products',ProductPagePreview)

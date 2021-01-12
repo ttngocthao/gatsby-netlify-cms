@@ -21,7 +21,8 @@ const ProductPage = (props) => {
             <h3>
                 Page content below
             </h3>
-            {viewInCMSAdmin ? <Content style={styles} source={body} className='product-page__content'/> : <div style={styles} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/>}
+          <Content style={styles} source={body} className='product-page__content'/> 
+          {/* <div style={styles} className='product-page__content' dangerouslySetInnerHTML={{__html: body}}/> */}
             {/* {renderAst(htmlAst)} */}
            
 

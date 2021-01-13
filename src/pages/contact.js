@@ -16,6 +16,7 @@ const Contact = () => {
             return
         }
         try {
+            
             const res = await fetch('/',{
                 method:'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -25,7 +26,7 @@ const Contact = () => {
                 // "g-recaptcha-response": token,
                 })
             })
-            if(res.status!==200){
+            if(res.status===200){
                 setInputVals(
                     {
                         ...inputVals,
@@ -65,8 +66,9 @@ const Contact = () => {
                 name='contact-form' 
                 data-netlify={true} 
                 data-netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true"
+                // data-netlify-recaptcha="true"
                 method="post"
+                action="/"
                 >
                 <input type="hidden" name="form-name" value="contact-form" />
                 <p>

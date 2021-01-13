@@ -19,9 +19,26 @@ const Contact = () => {
             const res = await fetch('/',{
                 method:'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(inputVals).toString()
+                body: encode({
+                    "form-name": "contact-form",
+                    ...inputVals,
+                // "g-recaptcha-response": token,
+                })
             })
-            console.log('Form successfully submitted',res)
+            if(res.status!==200){
+                setInputVals(
+                    {
+                        ...inputVals,
+                        name:'',
+                        email:'',
+                        role:'leader',
+                        message:''
+                    }
+                            )
+            }else{
+                throw Error
+            }
+            
         } catch (error) {
             alert('error')
             console.log(error)
@@ -35,6 +52,11 @@ const Contact = () => {
             [e.target.name]: e.target.value
         })
     }
+    const encode=(data)=> {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&")
+  }
     return (
         <div>
             <h1>Contact Us</h1>

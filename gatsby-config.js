@@ -40,5 +40,12 @@ module.exports = {
       }
     
     },
+    {resolve: 'gatsby-source-rest-api',
+      options:{
+        endpoints:[
+          'https://api.github.com/users'
+        ]
+      }
+    }
   ],
 };

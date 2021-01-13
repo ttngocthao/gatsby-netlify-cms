@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import ProductPageTemplate from '../../components/Product/ProductPage/ProductPage'
 import { HTMLContent } from "../../components/Content";
@@ -12,11 +12,10 @@ const ProductDetailPage = ({ data }) => {
         productImage,
       },
       html,
-      htmlAst
+    
     },
   } = data;
-  const [viewInCMSAdmin,setViewInCMSAdmin]= useState(false)
-  console.log(data)
+ 
   
   return (
     <div>

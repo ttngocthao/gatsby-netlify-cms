@@ -20,7 +20,7 @@ const Contact = () => {
                 method:'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({
-                    "form-name": e.target.getAttribute("contact-form"),
+                    "form-name": e.target.getAttribute("name"),
                     ...inputVals,
                 // "g-recaptcha-response": token,
                 })

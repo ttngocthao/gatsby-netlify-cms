@@ -1,5 +1,8 @@
 .product-page__content p{
     color:darkcyan;
 }
+.product-page__content li p {
+    color:black;
+}
 /*to style elements in preview panel, make sure to have class frame-preview */
 /* .frame-preview .product-page__content  */

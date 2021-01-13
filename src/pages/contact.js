@@ -20,7 +20,7 @@ const Contact = () => {
                 method:'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({
-                    "form-name": "contact-form",
+                    "form-name": e.target.getAttribute("contact-form"),
                     ...inputVals,
                 // "g-recaptcha-response": token,
                 })
@@ -66,6 +66,7 @@ const Contact = () => {
                 data-netlify={true} 
                 data-netlify-honeypot="bot-field"
                 data-netlify-recaptcha="true">
+                <input type="hidden" name="form-name" value="contact-form" />
                 <p>
                     <label>Your Name: <input value={name} type="text" name="name" onChange={inputChangeHandle}/></label>   
                 </p>

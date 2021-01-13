@@ -70,7 +70,8 @@ const Contact = () => {
                 method="post"
                 action="/"
                 >
-                <input type="hidden" name="form-name" value="contact-form" />
+                {/* A MUST ELEMENT - FORM NOT WORKING WITHOUT THIS */}
+                <input type="hidden" name="form-name" value="contact-form" /> 
                 <p>
                     <label>Your Name: <input value={name} type="text" name="name" onChange={inputChangeHandle}/></label>   
                 </p>

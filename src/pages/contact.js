@@ -65,7 +65,9 @@ const Contact = () => {
                 name='contact-form' 
                 data-netlify={true} 
                 data-netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true">
+                data-netlify-recaptcha="true"
+                method="post"
+                >
                 <input type="hidden" name="form-name" value="contact-form" />
                 <p>
                     <label>Your Name: <input value={name} type="text" name="name" onChange={inputChangeHandle}/></label>   

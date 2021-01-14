@@ -6,7 +6,6 @@ media_folder: /public/images
 public_folder: /images
 
 collections:
-
   - name: products
     label: Products
     folder: src/data/products
@@ -41,32 +40,30 @@ collections:
           required: false,
         }
 
-  # - name: coffeeYourWays
-  #   label: Coffee Your Ways
-  #   delete: false
-   
-  #   files:
-  #     - file: src/data/pages/coffeeYourWay/index.md
-  #       label: Your way
-  #       name: yourWayItem
-  #       widget: list
-  #       fields:
-  #       [
-  #         - {label: Label, name: label, widget: string,}
-          # - {
-          #     label: Display Image, 
-          #     name: yourWayItemImage, 
-          #     widget: object, 
-          #     fields: 
-          #       # {
-          #         - { label: Image, name: image, widget: image, }
-          #         - { label: Image Description, name: imageAlt, widget: string, }
-          #         - { label: Tagline, name: tagline, widget: string, }
-          #       # }
-                
-          #   }
-        # ]
-         
+  - name: coffeeYourWays
+    label: Coffee Your Ways
+    delete: false
+    files:
+      - file: src/data/pages/coffeeYourWay/index.md
+        label: Your way
+        name: yourWayItem
+        widget: list,
+        fields: [
+            { label: Your Way Label, name: yourWayLabel, widget: string },
+            { label: Image, name: image, widget: image },
+            { label: Image Description, name: imageAlt, widget: string },
+            { label: Tagline, name: tagline, widget: string },
+            # {
+            #   label: Display Image,
+            #   name: yourWayItemImage,
+            #   widget: object,
+            #   fields:
+            #     - ,
+            #     - ,
+            #     - ,
+            # },
+          ]
+
   - name: coffeeProducts
     label: Coffee Products
     create: true
@@ -83,52 +80,72 @@ collections:
           name: coffeeCategory,
           label: Category,
           widget: select,
-          options: ["beans-ground","capsules","gift-cards-and-cups","gift-sets"],
+          options:
+            ["beans-ground", "capsules", "gift-cards-and-cups", "gift-sets"],
         }
-      - {
-          name: coffeeProductName,
-          label: Product Name,
-          widget: string
-        }
-      # - { name: coffeeProductImage,
-      #     label: Product Image,
-      #     widget: object,
-      #     fields: 
-      #       - { label: Image, name: image, widget: image }
-      #       - { label: Image Description, name: imageAlt, widget: string }
-      #       - { label: Tagline, name: tagline, widget: string, default: '/#' }
-      #   }
+      - { name: coffeeProductName, label: Product Name, widget: string }
+      - name: coffeeProductImage,
+        label: Product Image,
+        widget: object,
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Image Description, name: imageAlt, widget: string }
+          - { label: Tagline, name: tagline, widget: string, default: "/#" }
 
   - name: header_footer
     label: Header & Footer
-    files: 
+    files:
       - file: src/data/header_footer/header.md
         label: Header
+        name: header
         media_folder: ""
         public_folder: ""
         fields:
-          - { name: templateKey, widget: hidden, label: Template Key, default: header}
-          - name: logoImage, 
-            widget: object, 
+          - {
+              name: templateKey,
+              widget: hidden,
+              label: Template Key,
+              default: header,
+            }
+          - name: logoImage,
+            widget: object,
             label: Logo Image,
             fields:
               - { label: Image, name: image, widget: image }
               - { label: Image Description, name: imageAlt, widget: string }
-              - { label: Tagline, name: tagline, widget: string }            
-          - name: navItem, 
-            label: Menu Items, 
+              - { label: Tagline, name: tagline, widget: string }
+          - name: navItem,
+            label: Menu Items,
             widget: list,
-            fields: 
-              - { label: Menu Label, name: menuLabel, widget: string },
-              - { label: Link Type, name: linkType, widget: select, options: [internal, external] },
-              - { label: Link URL, name: linkURL, widget: string, hint: Use a relative URL (e.g. /about) if the link is an internal link. },
-            
+            fields:
+              [
+                { label: Menu Label, name: menuLabel, widget: string },
+                {
+                  label: Link Type,
+                  name: linkType,
+                  widget: select,
+                  options: [internal, external],
+                },
+                {
+                  label: Link URL,
+                  name: linkURL,
+                  widget: string,
+                  hint: Use a relative URL (e.g. /about) if the link is an internal link.,
+                },
+              ]
+
       - file: src/data/header_footer/footer.md
         label: Footer
+        name: footer
         media_folder: ""
         public_folder: ""
         fields:
-          - { name: templateKey, widget: hidden, label: Template Key, default: footer}
+          - {
+              name: templateKey,
+              widget: hidden,
+              label: Template Key,
+              default: footer,
+            }
 
   - name: pages
     label: Pages
@@ -155,12 +172,10 @@ collections:
               widget: list,
               fields: [{ label: Paragraph, name: paragraph, widget: string }],
             }
-          - { 
-            label: Video Hero, 
-            name: heroVideo, 
-            widget: file, 
-            allow_multiple: false,
-            required: true
-          }
-     
-        
+          - {
+              label: Video Hero,
+              name: heroVideo,
+              widget: file,
+              allow_multiple: false,
+              required: true,
+            }

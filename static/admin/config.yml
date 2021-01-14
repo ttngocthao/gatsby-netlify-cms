@@ -56,13 +56,13 @@ collections:
           - {
               label: Display Image, 
               name: yourWayItemImage, 
-              widget: object, 
+              # widget: object, 
               fields: 
-                {
+                # {
                   - { label: Image, name: image, widget: image, }
                   - { label: Image Description, name: imageAlt, widget: string, }
                   - { label: Tagline, name: tagline, widget: string, }
-                }
+                # }
                 
             }
   - name: coffeeProducts

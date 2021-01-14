@@ -90,14 +90,14 @@ collections:
           label: Product Name,
           widget: string
         }
-      - { name: coffeeProductImage,
-          label: Product Image,
-          widget: object,
-          fields: 
-            - { label: Image, name: image, widget: image }
-            - { label: Image Description, name: imageAlt, widget: string }
-            - { label: Tagline, name: tagline, widget: string, default: '/#' }
-        }
+      # - { name: coffeeProductImage,
+      #     label: Product Image,
+      #     widget: object,
+      #     fields: 
+      #       - { label: Image, name: image, widget: image }
+      #       - { label: Image Description, name: imageAlt, widget: string }
+      #       - { label: Tagline, name: tagline, widget: string, default: '/#' }
+      #   }
 
   - name: header_footer
     label: Header & Footer
@@ -108,15 +108,15 @@ collections:
         public_folder: ""
         fields:
           - { name: templateKey, widget: hidden, label: Template Key, default: header}
-          - { 
-              name: logoImage, 
-              widget: object, 
-              label: Logo Image,
-              fields:
-                - { label: Image, name: image, widget: image }
-                - { label: Image Description, name: imageAlt, widget: string }
-                - { label: Tagline, name: tagline, widget: string }
-            }
+          # - { 
+          #     name: logoImage, 
+          #     widget: object, 
+          #     label: Logo Image,
+          #     fields:
+          #       - { label: Image, name: image, widget: image }
+          #       - { label: Image Description, name: imageAlt, widget: string }
+          #       - { label: Tagline, name: tagline, widget: string }
+          #   }
           - { 
               name: navItem, 
               label: Menu Items, 

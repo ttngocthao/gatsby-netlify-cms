@@ -6,6 +6,7 @@ media_folder: /public/images
 public_folder: /images
 
 collections:
+
   - name: products
     label: Products
     folder: src/data/products
@@ -39,8 +40,91 @@ collections:
           widget: markdown,
           required: false,
         }
+
+  - name: coffeeYourWays
+    label: Coffee Your Ways
+    delete: false
+    editor: 
+      preview: true
+    files:
+      - file: src/data/pages/coffeeYourWay/index.md
+        label: Your way
+        name: yourWayItem
+        width: list
+        fields:
+          - {label: Label, name: label, widget: string}
+          - {
+              label: Display Image, 
+              name: yourWayItemImage, 
+              widget: object, 
+              fields: 
+                - { label: Image, name: image, widget: image },
+                - { label: Image Description, name: imageAlt, widget: string },
+                - { label: Tagline, name: tagline, widget: string },
+            }
+  - name: coffeeProducts
+    label: Coffee Products
+    create: true
+    folder: src/data/pages/coffeeProducts/
+    slug: "{{coffeeCategory}}/{{coffeeProductName}}"
+    fields:
+      - {
+          name: templateKey,
+          widget: hidden,
+          label: Template Key,
+          default: coffee-products,
+        }
+      - {
+          name: coffeeCategory,
+          label: Category,
+          widget: select,
+          options: ["beans-ground","capsules","gift-cards-and-cups","gift-sets"]
+        }
+      - {
+          name: coffeeProductName,
+          label: Product Name,
+          widget: string
+      }
+
+  - name: header_footer
+    label: Header & Footer
+    files: 
+      - file: src/data/header_footer/header.md
+        label: Header
+        media_folder: ""
+        public_folder: ""
+        fields:
+          - { name: templateKey, widget: hidden, label: Template Key, default: header}
+          - { 
+              name: logoImage, 
+              widget: object, 
+              label: Logo Image,
+              fields:
+                - { label: Image, name: image, widget: image },
+                - { label: Image Description, name: imageAlt, widget: string },
+                - { label: Tagline, name: tagline, widget: string },
+            }
+          - { 
+              name: navItem, 
+              label: Menu Items, 
+              widget: list,
+              fields: 
+               - { label: Label, name: label, widget: string },
+               - { label: Link Type, name: linkType, widget: select, options: [internal, external] },
+               - { label: Link URL, name: linkURL, widget: string, hint: Use a relative URL (e.g. /about) if the link is an internal link. },
+            }
+      - file: src/data/header_footer/footer.md
+        label: Footer
+        media_folder: ""
+        public_folder: ""
+        fields:
+          - { name: templateKey, widget: hidden, label: Template Key, default: footer}
+
   - name: pages
     label: Pages
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: true
     files:
       - file: src/data/pages/home/index.md
         label: Home Page
@@ -61,3 +145,12 @@ collections:
               widget: list,
               fields: [{ label: Paragraph, name: paragraph, widget: string }],
             }
+          - { 
+            label: Video Hero, 
+            name: heroVideo, 
+            widget: file, 
+            allow_multiple: false,
+            required: true
+          }
+     
+        

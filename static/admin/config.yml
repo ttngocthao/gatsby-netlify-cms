@@ -41,19 +41,18 @@ collections:
           required: false,
         }
 
-  - name: coffeeYourWays
-    label: Coffee Your Ways
-    delete: false
-    editor: 
-      preview: true
-    files:
-      - file: src/data/pages/coffeeYourWay/index.md
-        label: Your way
-        name: yourWayItem
-        widget: list
-        fields:
-        [
-          - {label: Label, name: label, widget: string,}
+  # - name: coffeeYourWays
+  #   label: Coffee Your Ways
+  #   delete: false
+   
+  #   files:
+  #     - file: src/data/pages/coffeeYourWay/index.md
+  #       label: Your way
+  #       name: yourWayItem
+  #       widget: list
+  #       fields:
+  #       [
+  #         - {label: Label, name: label, widget: string,}
           # - {
           #     label: Display Image, 
           #     name: yourWayItemImage, 
@@ -66,7 +65,7 @@ collections:
           #       # }
                 
           #   }
-        ]
+        # ]
          
   - name: coffeeProducts
     label: Coffee Products

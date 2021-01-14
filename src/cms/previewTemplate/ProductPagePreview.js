@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductPageTemplate from '../../components/Product/ProductPage/ProductPage'
+import ProductPageTemplate from '../../components/Product/ProductPageTemplate'
 
 const ProductPagePreview = ({entry,widgetFor}) => {
     return (

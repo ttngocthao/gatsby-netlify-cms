@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import ProductPageTemplate from '../../components/Product/ProductPage/ProductPage'
+import ProductPageTemplate from '../../components/Product/ProductPageTemplate'
 import { HTMLContent } from "../../components/Content";
 
 const ProductDetailPage = ({ data }) => {

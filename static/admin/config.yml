@@ -52,19 +52,22 @@ collections:
         name: yourWayItem
         widget: list
         fields:
+        [
           - {label: Label, name: label, widget: string,}
-          - {
-              label: Display Image, 
-              name: yourWayItemImage, 
-              widget: object, 
-              fields: 
-                # {
-                  - { label: Image, name: image, widget: image, }
-                  - { label: Image Description, name: imageAlt, widget: string, }
-                  - { label: Tagline, name: tagline, widget: string, }
-                # }
+          # - {
+          #     label: Display Image, 
+          #     name: yourWayItemImage, 
+          #     widget: object, 
+          #     fields: 
+          #       # {
+          #         - { label: Image, name: image, widget: image, }
+          #         - { label: Image Description, name: imageAlt, widget: string, }
+          #         - { label: Tagline, name: tagline, widget: string, }
+          #       # }
                 
-            }
+          #   }
+        ]
+         
   - name: coffeeProducts
     label: Coffee Products
     create: true

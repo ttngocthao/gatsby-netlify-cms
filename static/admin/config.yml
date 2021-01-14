@@ -50,13 +50,13 @@ collections:
       - file: src/data/pages/coffeeYourWay/index.md
         label: Your way
         name: yourWayItem
-        width: list
+        widget: list
         fields:
           - {label: Label, name: label, widget: string,}
           - {
               label: Display Image, 
               name: yourWayItemImage, 
-              # widget: object, 
+              widget: object, 
               fields: 
                 # {
                   - { label: Image, name: image, widget: image, }

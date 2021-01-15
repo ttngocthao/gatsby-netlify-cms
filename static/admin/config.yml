@@ -48,21 +48,20 @@ collections:
         label: Your way
         name: yourWayItem
         widget: list,
-        fields: [
-            { label: Your Way Label, name: yourWayLabel, widget: string },
-            { label: Image, name: image, widget: image },
-            { label: Image Description, name: imageAlt, widget: string },
-            { label: Tagline, name: tagline, widget: string },
-            # {
-            #   label: Display Image,
-            #   name: yourWayItemImage,
-            #   widget: object,
-            #   fields:
-            #     - ,
-            #     - ,
-            #     - ,
-            # },
-          ]
+        fields:
+          - { label: Your Way Label, name: yourWayLabel, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Image Description, name: imageAlt, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          # {
+          #   label: Display Image,
+          #   name: yourWayItemImage,
+          #   widget: object,
+          #   fields:
+          #     - ,
+          #     - ,
+          #     - ,
+          # },
 
   - name: coffeeProducts
     label: Coffee Products
@@ -115,24 +114,22 @@ collections:
               - { label: Image Description, name: imageAlt, widget: string }
               - { label: Tagline, name: tagline, widget: string }
           - name: navItem,
-            label: Menu Items,
+            label: Menu ,
             widget: list,
             fields:
-              [
-                { label: Menu Label, name: menuLabel, widget: string },
-                {
+              - { label: Menu Label, name: menuLabel, widget: string }
+              - {
                   label: Link Type,
                   name: linkType,
                   widget: select,
                   options: [internal, external],
-                },
-                {
+                }
+              - {
                   label: Link URL,
                   name: linkURL,
                   widget: string,
                   hint: Use a relative URL (e.g. /about) if the link is an internal link.,
-                },
-              ]
+                }
 
       - file: src/data/header_footer/footer.md
         label: Footer
@@ -170,7 +167,7 @@ collections:
               label: Page Introduction,
               name: pageIntroduction,
               widget: list,
-              fields: [{ label: Paragraph, name: paragraph, widget: string }],
+              field: { label: Paragraph, name: paragraph, widget: string },
             }
           - {
               label: Video Hero,
